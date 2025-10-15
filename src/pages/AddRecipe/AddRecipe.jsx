@@ -142,7 +142,7 @@ const StAddRecipe = () => {
           <StFormTitleText />
         </div>
       </div>
-      <form onSubmit={handleSubmit(st_onSubmit)} className={styles.form}>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles.formWrapper}>
           <StImageUploader
             register={register}

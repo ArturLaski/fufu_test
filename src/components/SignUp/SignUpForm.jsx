@@ -41,7 +41,7 @@ export const StSignUpForm = ({ st_handleClickSignIn }) => {
 
   const widthIconEye = useStResponsiveValue(768, "20", "18");
 
-  const st_onSubmit = async (user) => {
+  const onSubmit = async (user) => {
     try {
         setIsLoading(true);
         const response = await fetch(`${BASE_URL}api/users/signup`, {
@@ -80,7 +80,7 @@ export const StSignUpForm = ({ st_handleClickSignIn }) => {
       {isLoading ? (
         <StLoader />
       ) : (
-        <form className={styles.container} onSubmit={handleSubmit(st_onSubmit)}>
+        <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
           <StModalTitle text={"Sign Up"} />
           <ul className={styles.list}>
             <li className={styles.item}>

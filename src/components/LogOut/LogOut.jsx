@@ -16,7 +16,7 @@ export const StLogOut = ({setModalLogOutOpen}) => {
 
     const modalTitleText = useStResponsiveValue(768, 'Log Out', 'Are you logging out?');
 
-    const st_onSubmit = async () => {
+    const onSubmit = async () => {
         setModalLogOutOpen(false);
         await data();
         dispatch(clearToken())
@@ -26,7 +26,7 @@ export const StLogOut = ({setModalLogOutOpen}) => {
         <>
         {isLoading
             ? <StLoader/>
-            : <form className={styles.container} onSubmit={handleSubmit(st_onSubmit)}>
+            : <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
                 <StModalTitle text={modalTitleText}/>
                 <p className={styles.text}>
                     You can always log back in at any time.

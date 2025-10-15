@@ -29,23 +29,23 @@ const StButton = ({
           btn.style.setProperty("--y", `${relativeY}px`);
         };
 
-        const st_onMouseMove = (e) => {
+        const onMouseMove = (e) => {
           st_updateCoordinates(e.clientX, e.clientY);
         };
 
-        const st_onTouchMove = (e) => {
+        const onTouchMove = (e) => {
           if (e.touches.length > 0) {
             const touch = e.touches[0];
             st_updateCoordinates(touch.clientX, touch.clientY);
           }
         };
 
-        btn.addEventListener("mousemove", st_onMouseMove);
-        btn.addEventListener("touchmove", st_onTouchMove);
+        btn.addEventListener("mousemove", onMouseMove);
+        btn.addEventListener("touchmove", onTouchMove);
 
         return () => {
-          btn.removeEventListener("mousemove", st_onMouseMove);
-          btn.removeEventListener("touchmove", st_onTouchMove);
+          btn.removeEventListener("mousemove", onMouseMove);
+          btn.removeEventListener("touchmove", onTouchMove);
         };
       }
     }
