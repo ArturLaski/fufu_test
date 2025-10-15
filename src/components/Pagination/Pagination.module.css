@@ -1,0 +1,69 @@
+.st-itemList {
+  list-style: none;
+  padding: 0;
+}
+
+.st-pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  height: 40px;
+  align-items: center;
+}
+
+.st-pageItem {
+  margin: 0 5px;
+}
+
+.st-previousItem,
+.st-nextItem {
+  display: block;
+  font-weight: bold;
+  color: var(--black);
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: 1px solid var(--black-10);
+  text-decoration: none;
+  cursor: pointer;
+  transition: baground-color var(--transition), color var(--transition);
+}
+
+.st-previousItem:hover,
+.st-nextItem:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.st-pageLink {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: baground-color var(--transition), color var(--transition);
+}
+
+.st-pageLink:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.active .st-pageLink {
+  border: 1px solid var(--black);
+}
+
+.st-breakMe {
+  cursor: default;
+  text-decoration: none;
+  color: var(--black);
+  pointer-events: none;
+  cursor: default;
+}
+
+.disabled .st-pageLink {
+  color: #ccc;
+  pointer-events: none;
+}

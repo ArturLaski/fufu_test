@@ -1,0 +1,28 @@
+.st-recipe_main_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.st-recipe_header {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.st-recipe_description {
+  color: rgba(5, 5, 5, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .st-recipe_header {
+    font-size: 24px;
+  }
+
+  .st-recipe_description {
+    font-size: 16px;
+  }
+}

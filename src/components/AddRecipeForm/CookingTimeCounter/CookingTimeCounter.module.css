@@ -1,0 +1,36 @@
+.st-iconBtn {
+  width: 48px;
+  height: 48px;
+  padding: 16px;
+  background-color: white;
+  box-shadow: none;
+  border: 1px solid var(--black-12);
+  transition: background-color var(--transition);
+  cursor: pointer;
+}
+
+.st-icon {
+  stroke: var(--black);
+  transition: stroke var(--transition);
+}
+
+.st-iconBtn:hover .st-icon {
+  stroke: var(--white);
+}
+
+.st-counterInput {
+  text-align: center;
+  border: none;
+  width: 50px;
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  padding: 0;
+}
+
+@media (min-width: 765px) {
+  .st-iconBtn {
+    width: 56px;
+    height: 56px;
+  }
+}
