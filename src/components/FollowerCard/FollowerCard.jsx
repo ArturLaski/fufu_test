@@ -2,14 +2,14 @@ import StButton from "../shared/StButton/StButton";
 import StIconButton from "../shared/StIconButton/StIconButton";
 import styles from "./StFollowerCard.module.css";
 import StSmallRecipePhoto from "../StSmallRecipePhoto/StSmallRecipePhoto.jsx";
-import { st_useResponsiveValue } from "../../utilities/index.js";
+import { useStResponsiveValue } from "../../utilities/index.js";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { st_selectId } from "../../store/features/authSlice.js";
 
 const StFollowerCard = ({ data, tab, st_handleFollowUser, st_handleUnfollowUser }) => {
-  const recipeCardsVisability = st_useResponsiveValue(768, false, 3);
-  const recipeCardsQuantity = st_useResponsiveValue(1440, 3, 4);
+  const recipeCardsVisability = useStResponsiveValue(768, false, 3);
+  const recipeCardsQuantity = useStResponsiveValue(1440, 3, 4);
   const authUserId = useSelector(st_selectId);
 
   const st_btnText = () => {

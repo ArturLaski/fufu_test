@@ -8,7 +8,7 @@ import styles from "./StSignInForm.module.css";
 
 import { sinInSchema } from "./SignInSchema.js";
 import { useLoginMutation } from "../../store/services/authService.js";
-import { st_useResponsiveValue } from "../../utilities/index.js";
+import { useStResponsiveValue } from "../../utilities/index.js";
 import { StButton, StInput, StModalTitle } from "../shared";
 import { getUser } from "../../store/features/authSlice.js";
 import { StLoader } from "../shared/StLoader/StLoader.jsx";
@@ -38,7 +38,7 @@ export const StSignInForm = ({ st_handleClickSignUp }) => {
     return () => subscription.unsubscribe();
   }, [watch]);
 
-  const widthIconEye = st_useResponsiveValue(768, "20", "18");
+  const widthIconEye = useStResponsiveValue(768, "20", "18");
 
   const st_onSubmit = async (user) => {
     try {
@@ -66,7 +66,7 @@ export const StSignInForm = ({ st_handleClickSignUp }) => {
       {isLoading ? (
         <StLoader />
       ) : (
-        <form className={styles.container} st_onSubmit={handleSubmit(st_onSubmit)}>
+        <form className={styles.container} onSubmit={handleSubmit(st_onSubmit)}>
           <StModalTitle text={"SIGN IN"} />
           <ul className={styles.list}>
             <li className={styles.item}>

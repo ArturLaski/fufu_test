@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const st_useResponsiveValue = (breakpoint, mobileValue, tabletValue) => {
+const useStResponsiveValue = (breakpoint, mobileValue, tabletValue) => {
   const [value, setValue] = useState(window.innerWidth >= breakpoint ? tabletValue : mobileValue);
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const st_useResponsiveValue = (breakpoint, mobileValue, tabletValue) => {
   return value;
 };
 
-export default st_useResponsiveValue;
+export default useStResponsiveValue;

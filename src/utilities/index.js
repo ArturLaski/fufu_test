@@ -1,2 +1,2 @@
-import st_useResponsiveValue from "./hooks/st_useResponsiveValue.js";
-export {st_useResponsiveValue};
+import useStResponsiveValue from "./hooks/useStResponsiveValue.js";
+export {useStResponsiveValue};

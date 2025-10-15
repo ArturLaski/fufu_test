@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const st_useAutoResizeTextarea = (textareaClass) => {
+const useStAutoResizeTextarea = (textareaClass) => {
   useEffect(() => {
     const textarea = document.querySelector(`.${textareaClass}`);
     const st_adjustHeight = (e) => {
@@ -16,4 +16,4 @@ const st_useAutoResizeTextarea = (textareaClass) => {
   }, [textareaClass]);
 };
 
-export default st_useAutoResizeTextarea;
+export default useStAutoResizeTextarea;

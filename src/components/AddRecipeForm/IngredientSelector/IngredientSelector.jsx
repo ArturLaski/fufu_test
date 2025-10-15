@@ -7,7 +7,7 @@ import StIconButton from "../../shared/StIconButton/StIconButton";
 import StCookingTimeCounter from "../StCookingTimeCounter/StCookingTimeCounter";
 import { StLoader } from "../../shared/StLoader/StLoader";
 import stylesInput from "../CustomInput.module.css";
-import st_useAutoResizeTextarea from "../../../utilities/hooks/st_useAutoResizeTextarea";
+import useStAutoResizeTextarea from "../../../utilities/hooks/useStAutoResizeTextarea";
 
 const StIngredientSelector = ({
   register,
@@ -58,7 +58,7 @@ const StIngredientSelector = ({
     return isLoading ? <StLoader /> : null;
   };
 
-  st_useAutoResizeTextarea(styles.textarea);
+  useStAutoResizeTextarea(styles.textarea);
 
   return (
     <div className={styles.container}>
