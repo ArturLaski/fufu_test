@@ -5,7 +5,7 @@ import styles from './StLogOut.module.css';
 import StModalTitle from "../shared/StModalTitle/StModalTitle.jsx";
 import {useLogoutMutation} from "../../store/services/authService.js";
 import {clearToken} from "../../store/features/authSlice.js";
-import {useStResponsiveValue} from "../../utilities/index.js";
+import {st_useResponsiveValue} from "../../utilities/index.js";
 import {StButton} from "../shared";
 import {StLoader} from "../shared/StLoader/StLoader.jsx";
 
@@ -14,9 +14,9 @@ export const StLogOut = ({setModalLogOutOpen}) => {
     const [data, {isLoading}] = useLogoutMutation();
     const dispatch = useDispatch();
 
-    const modalTitleText = useStResponsiveValue(768, 'Log Out', 'Are you logging out?');
+    const modalTitleText = st_useResponsiveValue(768, 'Log Out', 'Are you logging out?');
 
-    const onSubmit = async () => {
+    const st_onSubmit = async () => {
         setModalLogOutOpen(false);
         await data();
         dispatch(clearToken())
@@ -26,7 +26,7 @@ export const StLogOut = ({setModalLogOutOpen}) => {
         <>
         {isLoading
             ? <StLoader/>
-            : <form className={styles.container} onSubmit={handleSubmit(onSubmit)}>
+            : <form className={styles.container} st_onSubmit={handleSubmit(st_onSubmit)}>
                 <StModalTitle text={modalTitleText}/>
                 <p className={styles.text}>
                     You can always log back in at any time.

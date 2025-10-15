@@ -23,7 +23,7 @@ import stylesInput from "../../components/AddRecipeForm/CustomInput.module.css";
 import { setUserAddedRecipes } from "../../store/features/profileSlice";
 import { st_selectRecipes } from "../../store/selectors/profileSelectors";
 import { useDispatch, useSelector } from "react-redux";
-import useStAutoResizeTextarea from "../../utilities/hooks/useStAutoResizeTextarea";
+import st_useAutoResizeTextarea from "../../utilities/hooks/st_useAutoResizeTextarea";
 import { st_selectId } from "../../store/features/authSlice";
 
 const StAddRecipe = () => {
@@ -86,7 +86,7 @@ const StAddRecipe = () => {
 
   const navigate = useNavigate(); //
 
-  const onSubmit= async (data) => {
+  const st_onSubmit = async (data) => {
     const formData = new FormData();
     formData.append("thumb", data.thumb);
     formData.append("title", data.title);
@@ -128,7 +128,7 @@ const StAddRecipe = () => {
     setSelectedIngredients([]);
   };
 
-  useStAutoResizeTextarea(styles.textarea);
+  st_useAutoResizeTextarea(styles.textarea);
 
   return (
     <div className={styles.container}>
@@ -142,7 +142,7 @@ const StAddRecipe = () => {
           <StFormTitleText />
         </div>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <form st_onSubmit={handleSubmit(st_onSubmit)} className={styles.form}>
         <div className={styles.formWrapper}>
           <StImageUploader
             register={register}

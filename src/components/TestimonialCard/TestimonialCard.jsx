@@ -3,13 +3,13 @@ import 'simplebar-react/dist/simplebar.min.css';
 
 import styles from './StTestimonialCard.module.css'
 
-import {useStResponsiveValue} from "../../utilities/index.js";
+import {st_useResponsiveValue} from "../../utilities/index.js";
 import {StIcon } from "../shared";
 
 export const StTestimonialCard = ({text, name}) => {
 
-    const widthIcon = useStResponsiveValue('768', '40', '60');
-    const heightIcon = useStResponsiveValue('768', '32', '48');
+    const widthIcon = st_useResponsiveValue('768', '40', '60');
+    const heightIcon = st_useResponsiveValue('768', '32', '48');
 
     return (
         <div className={styles.container}>
